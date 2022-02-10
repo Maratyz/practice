@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int getline(char s[], int lim) {
+int mygetline(char s[], int lim) {
     int c, i;
 
     i = 0;
