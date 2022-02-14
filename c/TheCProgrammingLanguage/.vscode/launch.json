@@ -9,7 +9,7 @@
         "name": "(lldb) Launch",
         "type": "lldb",
         "request": "launch",
-        "program": "${workspaceFolder}/ch1/farh-cel",
+        "program": "${workspaceFolder}/ch5/exercise_5.5",
         "args": [],
         "stopAtEntry": false,
         "cwd": "${workspaceFolder}",
