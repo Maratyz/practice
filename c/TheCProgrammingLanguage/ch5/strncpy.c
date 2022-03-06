@@ -12,13 +12,17 @@ Full descriptions are in Appendix B.”
 char *mystrncpy(char*, char*, int);
 
 int main() {
-    char *src = "hello";
+    char src[100];
     char *dst = "world";
     printf("%s\n", mystrncpy(src, dst, 3));
     return 0;
 }
 
 char *mystrncpy(char *src, char *dst, int n) {
-    for ( ; n > 0 && ( *src++ = *dst++ ) ; n-- )
+    char *srcStart = src;
+    // for ( ; n > 0 && ( *src++ = *dst++ ) != '\0' ; n-- )
+    for ( ; n > 0 && ( *src++=*dst++ ) ; n-- )
         ;
+    *src = '\0';
+    return srcStart;
 }
